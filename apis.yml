@@ -1,12 +1,18 @@
+aid: regulatory
 name: Regulatory
 description: Regulatory is a compliance-related concept that helps organizations meet
   regulatory requirements and maintain adherence to industry standards. It supports
   audit readiness, risk management, and the demonstration of accountability to regulators
   and stakeholders.
-url: null
+type: Index
+url: https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml
 tags:
 - Regulatory
-created: '2025'
-modified: '2025'
+created: '2025-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis: []
 common: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
