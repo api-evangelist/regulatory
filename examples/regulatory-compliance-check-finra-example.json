@@ -1,0 +1,37 @@
+{
+  "checkId": "chk-2026-05-02-FINRA-001",
+  "entityId": "broker-dealer-12345",
+  "entityName": "Example Securities LLC",
+  "framework": "FINRA Rule 4370",
+  "jurisdiction": "US",
+  "checkDate": "2026-05-02T09:00:00Z",
+  "status": "Partial",
+  "findings": [
+    {
+      "findingId": "f-001",
+      "controlId": "FINRA-4370-BCP",
+      "status": "Pass",
+      "evidence": "Business continuity plan reviewed and approved by senior management on 2026-01-15. Plan covers all required scenarios including market disruptions, physical emergencies, and technology failures.",
+      "remediationRequired": false,
+      "remediationDeadline": null
+    },
+    {
+      "findingId": "f-002",
+      "controlId": "FINRA-4370-ANNUAL-TEST",
+      "status": "Pass",
+      "evidence": "Annual business continuity test completed on 2025-11-20. Test results documented with 98% system recovery rate within required RTO.",
+      "remediationRequired": false,
+      "remediationDeadline": null
+    },
+    {
+      "findingId": "f-003",
+      "controlId": "FINRA-4370-CUSTOMER-NOTICE",
+      "status": "Fail",
+      "evidence": "Customer notification procedures not updated to reflect new contact information for business continuity coordinator following personnel change in March 2026.",
+      "remediationRequired": true,
+      "remediationDeadline": "2026-05-30"
+    }
+  ],
+  "score": 78,
+  "reportUrl": "https://compliance-platform.example.com/reports/chk-2026-05-02-FINRA-001"
+}

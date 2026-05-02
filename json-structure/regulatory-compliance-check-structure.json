@@ -1,0 +1,29 @@
+{
+  "name": "Regulatory Compliance Check",
+  "description": "Structure documentation for a regulatory compliance check result from RegTech monitoring APIs.",
+  "fields": [
+    { "name": "checkId", "type": "string", "required": true, "description": "Unique compliance check identifier." },
+    { "name": "entityId", "type": "string", "required": true, "description": "Identifier of the entity being checked." },
+    { "name": "entityName", "type": "string", "required": false, "description": "Name of the entity." },
+    { "name": "framework", "type": "string", "required": true, "description": "Regulatory framework being checked." },
+    { "name": "jurisdiction", "type": "string", "required": false, "description": "Regulatory jurisdiction." },
+    { "name": "checkDate", "type": "date-time", "required": true, "description": "Date and time of the check." },
+    { "name": "status", "type": "string", "required": true, "description": "Overall compliance status (Compliant, Non-Compliant, Partial, etc.)." },
+    {
+      "name": "findings",
+      "type": "array[object]",
+      "required": false,
+      "description": "Individual compliance findings.",
+      "fields": [
+        { "name": "findingId", "type": "string", "required": true, "description": "Finding identifier." },
+        { "name": "controlId", "type": "string", "required": true, "description": "Control reference being checked." },
+        { "name": "status", "type": "string", "required": true, "description": "Finding status (Pass, Fail, Warning, Not Applicable)." },
+        { "name": "evidence", "type": "string", "required": false, "description": "Supporting evidence." },
+        { "name": "remediationRequired", "type": "boolean", "required": false, "description": "Whether remediation is needed." },
+        { "name": "remediationDeadline", "type": "date", "required": false, "description": "Deadline for remediation." }
+      ]
+    },
+    { "name": "score", "type": "number", "required": false, "description": "Compliance score as a percentage (0-100)." },
+    { "name": "reportUrl", "type": "uri", "required": false, "description": "URL to the full compliance report." }
+  ]
+}

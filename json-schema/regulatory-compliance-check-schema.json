@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/regulatory/json-schema/regulatory-compliance-check-schema.json",
+  "title": "Regulatory Compliance Check",
+  "description": "Schema for a regulatory compliance check result, as returned by RegTech APIs for ongoing compliance monitoring and reporting.",
+  "type": "object",
+  "required": ["checkId", "entityId", "framework", "checkDate", "status"],
+  "properties": {
+    "checkId": {
+      "type": "string",
+      "description": "Unique identifier for this compliance check."
+    },
+    "entityId": {
+      "type": "string",
+      "description": "Identifier of the entity being checked for compliance."
+    },
+    "entityName": {
+      "type": "string",
+      "description": "Name of the entity being checked."
+    },
+    "framework": {
+      "type": "string",
+      "description": "Regulatory framework being checked against (e.g., 'GDPR', 'HIPAA', 'MiFID II', 'SOC2')."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Regulatory jurisdiction (e.g., 'US', 'EU', 'UK')."
+    },
+    "checkDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time the compliance check was performed."
+    },
+    "status": {
+      "type": "string",
+      "description": "Overall compliance status.",
+      "enum": ["Compliant", "Non-Compliant", "Partial", "Under Review", "Unknown"]
+    },
+    "findings": {
+      "type": "array",
+      "description": "Individual compliance findings.",
+      "items": {
+        "type": "object",
+        "required": ["findingId", "controlId", "status"],
+        "properties": {
+          "findingId": {
+            "type": "string"
+          },
+          "controlId": {
+            "type": "string",
+            "description": "Reference to the specific compliance control checked."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Pass", "Fail", "Warning", "Not Applicable"]
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Evidence supporting this finding."
+          },
+          "remediationRequired": {
+            "type": "boolean"
+          },
+          "remediationDeadline": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall compliance score as a percentage."
+    },
+    "reportUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the full compliance report."
+    }
+  }
+}

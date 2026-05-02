@@ -1,0 +1,108 @@
+vocabulary:
+  name: Regulatory Vocabulary
+  description: Terminology used in regulatory compliance, regulatory reporting, RegTech platforms, and the APIs that enable organizations to manage compliance across financial services, healthcare, and other regulated industries.
+  version: '1.0'
+  created: '2026-05-02'
+  modified: '2026-05-02'
+  tags:
+    - Compliance
+    - Financial Services
+    - Regulatory
+    - RegTech
+
+  terms:
+
+    - term: AML
+      definition: Anti-Money Laundering - a set of laws, regulations, and procedures to detect and prevent the practice of generating income through illegal actions. APIs from providers like LSEG and ComplyAdvantage support AML screening and transaction monitoring.
+      tags:
+        - Financial Crime
+        - Financial Services
+
+    - term: CFTC
+      definition: Commodity Futures Trading Commission - the US federal agency that regulates the commodity futures, options, and swaps markets. CFTC reporting requirements drive demand for regulatory reporting APIs in derivatives markets.
+      tags:
+        - Derivatives
+        - US Regulation
+
+    - term: Compliance Monitoring
+      definition: Continuous automated assessment of whether systems, processes, and data meet regulatory requirements. API-driven compliance monitoring tools provide real-time alerts when compliance gaps are detected.
+      tags:
+        - Automation
+        - Compliance
+
+    - term: EMIR
+      definition: European Market Infrastructure Regulation - EU regulation requiring reporting of derivative trades to trade repositories and implementing risk mitigation standards for OTC derivatives. Drives regulatory reporting API demand in European financial markets.
+      tags:
+        - EU Regulation
+        - Financial Services
+
+    - term: FATF
+      definition: Financial Action Task Force - an intergovernmental organization that sets international standards for combating money laundering, terrorist financing, and other threats to the integrity of the international financial system.
+      tags:
+        - AML
+        - International Standards
+
+    - term: FDA
+      definition: US Food and Drug Administration - the federal agency responsible for protecting public health through regulation of food, drugs, medical devices, and biologics. FDA regulatory APIs provide access to drug approval data, adverse event reports, and device registrations.
+      tags:
+        - Healthcare Regulation
+        - US Regulation
+
+    - term: FINRA
+      definition: Financial Industry Regulatory Authority - the US self-regulatory organization for broker-dealers. FINRA provides APIs through its developer center for market data, regulatory filings, and compliance tools used by member firms.
+      tags:
+        - Financial Services
+        - Self-Regulatory Organization
+
+    - term: KYC
+      definition: Know Your Customer - the regulatory requirement for financial institutions to verify the identity of their clients and assess potential risks. APIs from providers like LSEG, Jumio, and Onfido support automated KYC verification workflows.
+      tags:
+        - Customer Due Diligence
+        - Financial Services
+
+    - term: MiFID II
+      definition: Markets in Financial Instruments Directive II - EU legislation governing investment firms and trading venues, requiring extensive transaction reporting, best execution documentation, and investor protection measures.
+      tags:
+        - EU Regulation
+        - Financial Services
+
+    - term: Regulatory Capital
+      definition: The minimum amount of capital that financial institutions are required to hold by regulators (e.g., Basel III, Solvency II) to ensure financial stability. Regulatory capital calculations may be supported by risk management APIs.
+      tags:
+        - Banking
+        - Risk Management
+
+    - term: Regulatory Change Management
+      definition: The organizational discipline of tracking regulatory changes, assessing their impact, and implementing necessary compliance adjustments. APIs from RegTech providers automate regulatory change aggregation and alerting.
+      tags:
+        - Compliance
+        - Operations
+
+    - term: Regulatory Reporting
+      definition: The submission of required data and information to regulatory authorities according to prescribed formats and schedules. Includes trade reporting (EMIR, CFTC), financial reporting (FFIEC, FINRA), and operational reporting.
+      tags:
+        - Financial Services
+        - Reporting
+
+    - term: RegTech
+      definition: Regulatory Technology - use of technology to help companies comply with regulations more efficiently and effectively. RegTech solutions include APIs for compliance monitoring, regulatory data aggregation, KYC/AML automation, and reporting.
+      tags:
+        - Technology
+
+    - term: Sanctions Screening
+      definition: The process of checking individuals and entities against sanctions lists (OFAC SDN, EU Consolidated List, UN Sanctions) to prevent transactions with sanctioned parties. Real-time sanctions screening APIs are required for financial institutions.
+      tags:
+        - AML
+        - Financial Crime
+
+    - term: SEC
+      definition: Securities and Exchange Commission - the US federal agency responsible for regulating the securities industry and protecting investors. SEC APIs (EDGAR) provide access to company filings, financial disclosures, and enforcement actions.
+      tags:
+        - Financial Services
+        - US Regulation
+
+    - term: Solvency II
+      definition: EU regulatory framework for insurance companies that sets capital requirements and risk management standards. Requires detailed regulatory reporting from insurance firms on their financial position and solvency capital requirements.
+      tags:
+        - EU Regulation
+        - Insurance

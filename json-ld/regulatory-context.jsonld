@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "reg": "https://api-evangelist.github.io/regulatory/vocab#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "RegulatoryReport": {
+      "@id": "reg:RegulatoryReport",
+      "@type": "schema:Report",
+      "@context": {
+        "reportType": "reg:reportType",
+        "regulatoryAuthority": "reg:regulatoryAuthority",
+        "reportingPeriod": "reg:reportingPeriod",
+        "submissionDeadline": "reg:submissionDeadline",
+        "filingStatus": "reg:filingStatus"
+      }
+    },
+    "ComplianceCheck": {
+      "@id": "reg:ComplianceCheck",
+      "@type": "schema:Action",
+      "@context": {
+        "framework": "reg:framework",
+        "checkDate": "schema:startTime",
+        "result": "schema:result",
+        "findings": "reg:findings",
+        "remediationRequired": "reg:remediationRequired"
+      }
+    },
+    "RegulatoryRequirement": {
+      "@id": "reg:RegulatoryRequirement",
+      "@type": "schema:Legislation",
+      "@context": {
+        "requirementId": "reg:requirementId",
+        "regulation": "reg:sourceRegulation",
+        "applicableEntities": "reg:applicableEntities",
+        "industry": "schema:industry",
+        "jurisdiction": "schema:addressCountry",
+        "effectiveDate": "schema:legislationDate"
+      }
+    },
+    "SanctionsCheck": {
+      "@id": "reg:SanctionsCheck",
+      "@type": "schema:Action",
+      "@context": {
+        "entity": "schema:agent",
+        "listChecked": "reg:sanctionsList",
+        "checkDate": "schema:startTime",
+        "result": "schema:result",
+        "matchType": "reg:matchType"
+      }
+    },
+    "KYCRecord": {
+      "@id": "reg:KYCRecord",
+      "@type": "schema:Thing",
+      "@context": {
+        "customer": "schema:customer",
+        "verificationDate": "schema:dateCreated",
+        "verificationStatus": "reg:verificationStatus",
+        "riskRating": "reg:riskRating",
+        "documentsVerified": "reg:documentsVerified"
+      }
+    },
+    "TradeReport": {
+      "@id": "reg:TradeReport",
+      "@type": "schema:Report",
+      "@context": {
+        "tradeId": "reg:tradeId",
+        "reportingFramework": "reg:reportingFramework",
+        "asset": "schema:financialProduct",
+        "notionalAmount": "schema:amount",
+        "currency": "schema:currency",
+        "reportedDate": "schema:dateCreated"
+      }
+    }
+  }
+}
