@@ -28,6 +28,8 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.finra.org/
+      - type: OpenAPI
+        url: openapi/regulatory-openapi.yml
   - aid: regulatory:compliance-ai
     name: Compliance.ai API
     description: Compliance.ai automatically aggregates regulatory data from Federal and State agencies, enforcement actions, regulatory publications, and millions of rules, providing an API for financial institutions and GRC platforms to stay current on regulatory changes.
