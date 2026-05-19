@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: FINRA Developer Center API — Datasets
+  description: 'FINRA Developer Center API — Datasets. 1 operations. Lead operation: List datasets. Self-contained Naftiko
+    capability covering one Regulatory business surface.'
+  tags:
+  - Regulatory
+  - Datasets
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    REGULATORY_API_KEY: REGULATORY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: regulatory-datasets
+    baseUri: https://api.finra.org
+    description: FINRA Developer Center API — Datasets business capability. Self-contained, no shared references.
+    resources:
+    - name: datasets
+      path: /datasets
+      operations:
+      - name: listdatasets
+        method: GET
+        description: List datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.REGULATORY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: regulatory-datasets-rest
+    port: 8080
+    description: REST adapter for FINRA Developer Center API — Datasets. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/datasets
+      name: datasets
+      description: REST surface for datasets.
+      operations:
+      - method: GET
+        name: listdatasets
+        description: List datasets
+        call: regulatory-datasets.listdatasets
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: regulatory-datasets-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for FINRA Developer Center API — Datasets. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-datasets
+      description: List datasets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: regulatory-datasets.listdatasets
+      outputParameters:
+      - type: object
+        mapping: $.
