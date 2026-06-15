@@ -1,14 +1,12 @@
-# Regulatory
+# Regulatory (regulatory)
 
 The regulatory domain encompasses compliance requirements, regulatory reporting, and governance frameworks that organizations must adhere to across industries. APIs in this space enable businesses to automate compliance workflows, track regulatory changes, submit required filings, and manage risk. Key sectors include financial services (SEC, FINRA, CFTC), healthcare (FDA, CMS), telecommunications (FCC), and environmental regulation (EPA).
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml)
 
 ## Scope
 
 - **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
 
 ## Tags
 
@@ -16,69 +14,113 @@ The regulatory domain encompasses compliance requirements, regulatory reporting,
 - Financial Services
 - Governance
 - Healthcare Regulation
-- RegTech
 - Regulatory Reporting
 - Risk Management
+- RegTech
 
 ## Timestamps
 
 - **Created:** 2025-01-01
-- **Modified:** 2026-05-02
+- **Modified:** 2026-05-19
 
 ## APIs
 
-| Name | Description |
-|------|-------------|
-| [FINRA Developer Center API](https://developer.finra.org/) | Market data, compliance tools, and regulatory filing APIs for financial services |
-| [Compliance.ai API](https://www.compliance.ai/api/) | Automated regulatory change aggregation for financial institutions and GRC platforms |
-| [Regology API](https://regology.com/) | AI-powered global regulatory compliance research and change management |
-| [LSEG Risk and Regulatory Compliance API](https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance) | Sanctions screening, KYC/AML, and regulatory reporting for financial institutions |
+### FINRA Developer Center API
 
-## Resources
+FINRA (Financial Industry Regulatory Authority) provides APIs to support automation goals for member firms and the broader financial services industry. APIs provide access to market data, compliance tools, regulatory filings, and risk management resources.
 
-| Name | Type | URL |
-|------|------|-----|
-| FINRA Developer Center | Website | https://developer.finra.org/ |
-| Compliance.ai Developer Program | Website | https://www.compliance.ai/api/ |
-| Regology AI Regulatory Compliance Platform | Website | https://regology.com/ |
-| LSEG Risk and Regulatory Compliance Developer Portal | Website | https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance |
-| Regulativ AI Compliance Platform | Website | https://www.regulativ.ai/ |
-| 10 Data Regulations All API Developers Should Know | Website | https://nordicapis.com/10-data-regulations-all-api-developers-should-know-about/ |
+- **Human URL:** [https://developer.finra.org/](https://developer.finra.org/)
+- **Base URL:** `https://api.finra.org`
 
-## Artifacts
+#### Tags
 
-### JSON Schema
+- Financial Regulation
+- FINRA
+- Market Data
+- Regulatory Compliance
 
-| File | Description |
-|------|-------------|
-| [regulatory-compliance-check-schema.json](json-schema/regulatory-compliance-check-schema.json) | Schema for regulatory compliance check results from RegTech monitoring APIs |
+#### Properties
 
-### JSON Structure
+- [Documentation](https://developer.finra.org/)
+- [OpenAPI](openapi/regulatory-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/regulatory.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/regulatory.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-| File | Description |
-|------|-------------|
-| [regulatory-compliance-check-structure.json](json-structure/regulatory-compliance-check-structure.json) | Field-level structure documentation for compliance check results |
+### Compliance.ai API
 
-### JSON-LD
+Compliance.ai automatically aggregates regulatory data from Federal and State agencies, enforcement actions, regulatory publications, and millions of rules, providing an API for financial institutions and GRC platforms to stay current on regulatory changes.
 
-| File | Description |
-|------|-------------|
-| [regulatory-context.jsonld](json-ld/regulatory-context.jsonld) | JSON-LD context for regulatory reporting, KYC, sanctions screening, and compliance workflows |
+- **Human URL:** [https://www.compliance.ai/api/](https://www.compliance.ai/api/)
+- **Base URL:** `https://api.compliance.ai`
 
-### Examples
+#### Tags
 
-| File | Description |
-|------|-------------|
-| [regulatory-compliance-check-finra-example.json](examples/regulatory-compliance-check-finra-example.json) | Example FINRA Rule 4370 compliance check with findings and remediation tracking |
+- Financial Services
+- Regulatory Change Management
+- RegTech
 
-### Vocabulary
+#### Properties
 
-| File | Description |
-|------|-------------|
-| [regulatory-vocabulary.yml](vocabulary/regulatory-vocabulary.yml) | Glossary of regulatory compliance, reporting, and RegTech terminology |
+- [Documentation](https://www.compliance.ai/api/)
+- [Postman Collection](collections/regulatory.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/regulatory.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### Regology API
+
+Regology is an AI-powered global regulatory compliance platform providing APIs for regulatory research, change management, and compliance workflows. Aggregates and organizes regulatory content from thousands of global sources.
+
+- **Human URL:** [https://regology.com/](https://regology.com/)
+- **Base URL:** `https://api.regology.com/v1`
+
+#### Tags
+
+- AI
+- Compliance
+- Global Regulation
+- Regulatory Research
+
+#### Properties
+
+- [Documentation](https://regology.com/platform)
+- [Postman Collection](collections/regulatory.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/regulatory.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+### LSEG Risk and Regulatory Compliance API
+
+London Stock Exchange Group (LSEG) offers a developer portal with APIs for risk and regulatory compliance including sanctions screening, KYC/AML checks, and regulatory reporting tools used by financial institutions globally.
+
+- **Human URL:** [https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance](https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance)
+- **Base URL:** `https://api.refinitiv.com`
+
+#### Tags
+
+- AML
+- Financial Services
+- KYC
+- Regulatory Reporting
+- Sanctions Screening
+
+#### Properties
+
+- [Documentation](https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance)
+- [Postman Collection](collections/regulatory.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/regulatory.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+## Common Properties
+
+- [Website](https://developer.finra.org/)
+- [Website](https://www.compliance.ai/api/)
+- [Website](https://regology.com/)
+- [Website](https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance)
+- [Website](https://www.regulativ.ai/)
+- [Website](https://nordicapis.com/10-data-regulations-all-api-developers-should-know-about/)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/json-schema/regulatory-compliance-check-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/json-structure/regulatory-compliance-check-structure.json)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/json-ld/regulatory-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/vocabulary/regulatory-vocabulary.yml)
+- [Examples](https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/examples/regulatory-compliance-check-finra-example.json)
 
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** kin@apievangelist.com
