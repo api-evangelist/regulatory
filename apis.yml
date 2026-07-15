@@ -86,6 +86,8 @@ apis:
       - type: Documentation
         url: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
 common:
+  - type: AgenticAccess
+    url: agentic-access/regulatory-agentic-access.yml
   - type: DomainSecurity
     url: security/regulatory-domain-security.yml
   - type: Authentication
