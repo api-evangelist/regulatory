@@ -1,5 +1,6 @@
 aid: regulatory
 name: Regulatory
+kind: topic
 description: >-
   The regulatory domain encompasses compliance requirements, regulatory reporting, and governance frameworks that
   organizations must adhere to across industries. APIs in this space enable businesses to automate compliance workflows,
