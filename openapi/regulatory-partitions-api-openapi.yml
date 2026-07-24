@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: FINRA Developer Center Async Partitions API
+  description: 'The FINRA (Financial Industry Regulatory Authority) Developer Center exposes
+
+    a REST Query API for accessing market data, regulatory datasets, and related
+
+    metadata. The Query API provides dataset metadata, partition information,
+
+    record-level retrieval, and asynchronous query support across organized
+
+    groups and named datasets.'
+  version: '1.0'
+  contact:
+    name: FINRA Developer Center
+    url: https://developer.finra.org/
+servers:
+- url: https://api.finra.org
+  description: Production
+- url: https://api-int.qa.finra.org
+  description: QA Test
+security:
+- bearerAuth: []
+tags:
+- name: Partitions
+  description: Partition values for datasets.
+paths:
+  /partitions/group/{group}/name/{dataset}:
+    get:
+      tags:
+      - Partitions
+      summary: List dataset partitions
+      description: Retrieves unique partition values for a dataset.
+      operationId: listDatasetPartitions
+      parameters:
+      - $ref: '#/components/parameters/GroupParam'
+      - $ref: '#/components/parameters/DatasetParam'
+      responses:
+        '200':
+          description: Partition values.
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  responses:
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            type: object
+  parameters:
+    DatasetParam:
+      name: dataset
+      in: path
+      required: true
+      description: Dataset name within the group.
+      schema:
+        type: string
+    GroupParam:
+      name: group
+      in: path
+      required: true
+      description: Dataset group identifier.
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth 2.0 bearer token issued by FINRA Identity Provider.
+x-generated-from: https://developer.finra.org/
+x-generated-by: claude-crawl-2026-05-08

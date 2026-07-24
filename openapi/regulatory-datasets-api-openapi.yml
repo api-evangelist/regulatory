@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: FINRA Developer Center Async Datasets API
+  description: 'The FINRA (Financial Industry Regulatory Authority) Developer Center exposes
+
+    a REST Query API for accessing market data, regulatory datasets, and related
+
+    metadata. The Query API provides dataset metadata, partition information,
+
+    record-level retrieval, and asynchronous query support across organized
+
+    groups and named datasets.'
+  version: '1.0'
+  contact:
+    name: FINRA Developer Center
+    url: https://developer.finra.org/
+servers:
+- url: https://api.finra.org
+  description: Production
+- url: https://api-int.qa.finra.org
+  description: QA Test
+security:
+- bearerAuth: []
+tags:
+- name: Datasets
+  description: Dataset discovery and listing.
+paths:
+  /datasets:
+    get:
+      tags:
+      - Datasets
+      summary: List datasets
+      description: Returns a comprehensive list of all Query API datasets.
+      operationId: listDatasets
+      responses:
+        '200':
+          description: List of datasets.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+components:
+  responses:
+    Unauthorized:
+      description: Missing or invalid authentication.
+      content:
+        application/json:
+          schema:
+            type: object
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth 2.0 bearer token issued by FINRA Identity Provider.
+x-generated-from: https://developer.finra.org/
+x-generated-by: claude-crawl-2026-05-08
