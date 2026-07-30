@@ -1,4 +1,18 @@
 aid: regulatory
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/regulatory.png
 name: Regulatory
 kind: topic
 description: >-
@@ -20,72 +34,114 @@ created: '2025-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: regulatory:finra
-    name: FINRA Developer Center API
-    description: >-
-      FINRA (Financial Industry Regulatory Authority) provides APIs to support automation goals for member firms and the
-      broader financial services industry. APIs provide access to market data, compliance tools, regulatory filings, and
-      risk management resources.
-    humanURL: https://developer.finra.org/
-    baseURL: https://api.finra.org
-    tags:
-      - Financial Regulation
-      - FINRA
-      - Market Data
-      - Regulatory Compliance
-    properties:
-      - type: Documentation
-        url: https://developer.finra.org/
-      - type: OpenAPI
-        url: openapi/regulatory-openapi.yml
-  - aid: regulatory:compliance-ai
-    name: Compliance.ai API
-    description: >-
-      Compliance.ai automatically aggregates regulatory data from Federal and State agencies, enforcement actions,
-      regulatory publications, and millions of rules, providing an API for financial institutions and GRC platforms to
-      stay current on regulatory changes.
-    humanURL: https://www.compliance.ai/api/
-    baseURL: https://api.compliance.ai
-    tags:
-      - Financial Services
-      - Regulatory Change Management
-      - RegTech
-    properties:
-      - type: Documentation
-        url: https://www.compliance.ai/api/
-  - aid: regulatory:regology
-    name: Regology API
-    description: >-
-      Regology is an AI-powered global regulatory compliance platform providing APIs for regulatory research, change
-      management, and compliance workflows. Aggregates and organizes regulatory content from thousands of global
-      sources.
-    humanURL: https://regology.com/
-    baseURL: https://api.regology.com/v1
-    tags:
-      - AI
-      - Compliance
-      - Global Regulation
-      - Regulatory Research
-    properties:
-      - type: Documentation
-        url: https://regology.com/platform
-  - aid: regulatory:lseg-regulatory
-    name: LSEG Risk and Regulatory Compliance API
-    description: >-
-      London Stock Exchange Group (LSEG) offers a developer portal with APIs for risk and regulatory compliance
-      including sanctions screening, KYC/AML checks, and regulatory reporting tools used by financial institutions
-      globally.
-    humanURL: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
-    baseURL: https://api.refinitiv.com
-    tags:
-      - AML
-      - Financial Services
-      - KYC
-      - Regulatory Reporting
-      - Sanctions Screening
-    properties:
-      - type: Documentation
-        url: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
+- aid: regulatory:compliance-ai
+  name: Compliance.ai API
+  description: >-
+    Compliance.ai automatically aggregates regulatory data from Federal and State agencies, enforcement
+    actions, regulatory publications, and millions of rules, providing an API for financial institutions
+    and GRC platforms to stay current on regulatory changes.
+  humanURL: https://www.compliance.ai/api/
+  baseURL: https://api.compliance.ai
+  tags:
+  - Financial Services
+  - Regulatory Change Management
+  - RegTech
+  properties:
+  - type: Documentation
+    url: https://www.compliance.ai/api/
+- aid: regulatory:regology
+  name: Regology API
+  description: >-
+    Regology is an AI-powered global regulatory compliance platform providing APIs for regulatory research,
+    change management, and compliance workflows. Aggregates and organizes regulatory content from thousands
+    of global sources.
+  humanURL: https://regology.com/
+  baseURL: https://api.regology.com/v1
+  tags:
+  - AI
+  - Compliance
+  - Global Regulation
+  - Regulatory Research
+  properties:
+  - type: Documentation
+    url: https://regology.com/platform
+- aid: regulatory:lseg-regulatory
+  name: LSEG Risk and Regulatory Compliance API
+  description: >-
+    London Stock Exchange Group (LSEG) offers a developer portal with APIs for risk and regulatory compliance
+    including sanctions screening, KYC/AML checks, and regulatory reporting tools used by financial institutions
+    globally.
+  humanURL: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
+  baseURL: https://api.refinitiv.com
+  tags:
+  - AML
+  - Financial Services
+  - KYC
+  - Regulatory Reporting
+  - Sanctions Screening
+  properties:
+  - type: Documentation
+    url: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
+- aid: regulatory:regulatory-async-api
+  name: Regulatory Async API
+  description: Asynchronous query operations.
+  humanURL: https://developer.finra.org/
+  baseURL: https://api.finra.org
+  tags:
+  - Async
+  properties:
+  - type: OpenAPI
+    url: openapi/regulatory-async-api-openapi.yml
+  - type: Documentation
+    url: https://developer.finra.org/
+- aid: regulatory:regulatory-data-api
+  name: Regulatory Data API
+  description: Querying records from datasets.
+  humanURL: https://developer.finra.org/
+  baseURL: https://api.finra.org
+  tags:
+  - Data
+  properties:
+  - type: OpenAPI
+    url: openapi/regulatory-data-api-openapi.yml
+  - type: Documentation
+    url: https://developer.finra.org/
+- aid: regulatory:regulatory-datasets-api
+  name: Regulatory Datasets API
+  description: Dataset discovery and listing.
+  humanURL: https://developer.finra.org/
+  baseURL: https://api.finra.org
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/regulatory-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://developer.finra.org/
+- aid: regulatory:regulatory-metadata-api
+  name: Regulatory Metadata API
+  description: Field-level metadata for datasets.
+  humanURL: https://developer.finra.org/
+  baseURL: https://api.finra.org
+  tags:
+  - Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/regulatory-metadata-api-openapi.yml
+  - type: Documentation
+    url: https://developer.finra.org/
+- aid: regulatory:regulatory-partitions-api
+  name: Regulatory Partitions API
+  description: Partition values for datasets.
+  humanURL: https://developer.finra.org/
+  baseURL: https://api.finra.org
+  tags:
+  - Partitions
+  properties:
+  - type: OpenAPI
+    url: openapi/regulatory-partitions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.finra.org/
 common:
   - type: AgenticAccess
     url: agentic-access/regulatory-agentic-access.yml
