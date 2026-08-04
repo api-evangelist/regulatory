@@ -1,0 +1,22 @@
+{
+  "provider": "regulatory",
+  "sources": [
+    "regulatory-async-api-openapi.yml",
+    "regulatory-data-api-openapi.yml",
+    "regulatory-datasets-api-openapi.yml",
+    "regulatory-metadata-api-openapi.yml",
+    "regulatory-partitions-api-openapi.yml"
+  ],
+  "outputs": [
+    "regulatory-async-api-openapi.yml",
+    "regulatory-data-api-openapi.yml",
+    "regulatory-datasets-api-openapi.yml",
+    "regulatory-metadata-api-openapi.yml",
+    "regulatory-partitions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
