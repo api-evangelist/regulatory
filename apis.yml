@@ -32,7 +32,7 @@ tags:
   - RegTech
 created: '2025-01-01'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: regulatory:compliance-ai
   name: Compliance.ai API
