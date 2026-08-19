@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Developer Center Async API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Async",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get async request status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/async-requests/group/:group/name/:dataset/:requestId",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path",
+                "description": "Dataset group identifier."
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path",
+                "description": "Dataset name within the group."
+              },
+              {
+                "name": "requestId",
+                "value": "",
+                "type": "path",
+                "description": "Asynchronous request identifier."
+              }
+            ]
+          },
+          "docs": "Returns the status and result location for an asynchronous query request."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

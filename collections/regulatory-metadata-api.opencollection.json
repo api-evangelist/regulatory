@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FINRA Developer Center Async Metadata API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get dataset metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.finra.org/metadata/group/:group/name/:dataset",
+            "params": [
+              {
+                "name": "group",
+                "value": "",
+                "type": "path",
+                "description": "Dataset group identifier."
+              },
+              {
+                "name": "dataset",
+                "value": "",
+                "type": "path",
+                "description": "Dataset name within the group."
+              }
+            ]
+          },
+          "docs": "Returns dataset metadata, including the available fields."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
