@@ -24,6 +24,14 @@ type: Index
 url: https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml
 tags:
   - Compliance
+  - Financial-Services
+  - Governance
+  - Healthcare Regulation
+  - Regulatory Reporting
+  - Risk Management
+  - RegTech
+tags_raw:
+  - Compliance
   - Financial Services
   - Governance
   - Healthcare Regulation
@@ -43,6 +51,10 @@ apis:
   humanURL: https://www.compliance.ai/api/
   baseURL: https://api.compliance.ai
   tags:
+  - Financial-Services
+  - Regulatory Change Management
+  - RegTech
+  tags_raw:
   - Financial Services
   - Regulatory Change Management
   - RegTech
@@ -58,6 +70,11 @@ apis:
   humanURL: https://regology.com/
   baseURL: https://api.regology.com/v1
   tags:
+  - Artificial Intelligence
+  - Compliance
+  - Global Regulation
+  - Regulatory Research
+  tags_raw:
   - AI
   - Compliance
   - Global Regulation
@@ -74,6 +91,12 @@ apis:
   humanURL: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
   baseURL: https://api.refinitiv.com
   tags:
+  - AML
+  - Financial-Services
+  - KYC
+  - Regulatory Reporting
+  - Sanctions Screening
+  tags_raw:
   - AML
   - Financial Services
   - KYC
