@@ -36,7 +36,7 @@ type: Index
 url: https://raw.githubusercontent.com/api-evangelist/regulatory/refs/heads/main/apis.yml
 tags:
   - Compliance
-  - Financial-Services
+  - Financial Services
   - Governance
   - Healthcare Regulation
   - Regulatory Reporting
@@ -50,6 +50,7 @@ tags_raw:
   - Regulatory Reporting
   - Risk Management
   - RegTech
+  - Financial-Services
 created: '2025-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.23'
@@ -63,13 +64,14 @@ apis:
   humanURL: https://www.compliance.ai/api/
   baseURL: https://api.compliance.ai
   tags:
-  - Financial-Services
+  - Financial Services
   - Regulatory Change Management
   - RegTech
   tags_raw:
   - Financial Services
   - Regulatory Change Management
   - RegTech
+  - Financial-Services
   properties:
   - type: Documentation
     url: https://www.compliance.ai/api/
@@ -104,7 +106,7 @@ apis:
   baseURL: https://api.refinitiv.com
   tags:
   - AML
-  - Financial-Services
+  - Financial Services
   - KYC
   - Regulatory Reporting
   - Sanctions Screening
@@ -114,6 +116,7 @@ apis:
   - KYC
   - Regulatory Reporting
   - Sanctions Screening
+  - Financial-Services
   properties:
   - type: Documentation
     url: https://developers.lseg.com/en/use-cases-catalog/risk-regulatory-compliance
