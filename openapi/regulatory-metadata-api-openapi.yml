@@ -45,13 +45,6 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
-  responses:
-    NotFound:
-      description: Resource not found.
-      content:
-        application/json:
-          schema:
-            type: object
   parameters:
     GroupParam:
       name: group
@@ -67,6 +60,13 @@ components:
       description: Dataset name within the group.
       schema:
         type: string
+  responses:
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            type: object
   securitySchemes:
     bearerAuth:
       type: http
