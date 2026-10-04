@@ -52,18 +52,18 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   parameters:
-    GroupParam:
-      name: group
-      in: path
-      required: true
-      description: Dataset group identifier.
-      schema:
-        type: string
     DatasetParam:
       name: dataset
       in: path
       required: true
       description: Dataset name within the group.
+      schema:
+        type: string
+    GroupParam:
+      name: group
+      in: path
+      required: true
+      description: Dataset group identifier.
       schema:
         type: string
   responses:
