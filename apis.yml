@@ -52,7 +52,7 @@ tags_raw:
   - RegTech
   - Financial-Services
 created: '2025-01-01'
-modified: '2026-05-19'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: regulatory:compliance-ai
@@ -181,6 +181,8 @@ apis:
   - type: Documentation
     url: https://developer.finra.org/
 common:
+  - url: https://developer.finra.org/rss.xml
+    type: BlogRSS
   - type: AgenticAccess
     url: agentic-access/regulatory-agentic-access.yml
   - type: DomainSecurity
