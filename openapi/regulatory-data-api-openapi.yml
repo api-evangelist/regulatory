@@ -110,19 +110,6 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
-  responses:
-    BadRequest:
-      description: Invalid request.
-      content:
-        application/json:
-          schema:
-            type: object
-    NotFound:
-      description: Resource not found.
-      content:
-        application/json:
-          schema:
-            type: object
   parameters:
     DatasetParam:
       name: dataset
@@ -138,6 +125,19 @@ components:
       description: Dataset group identifier.
       schema:
         type: string
+  responses:
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            type: object
+    BadRequest:
+      description: Invalid request.
+      content:
+        application/json:
+          schema:
+            type: object
   securitySchemes:
     bearerAuth:
       type: http
